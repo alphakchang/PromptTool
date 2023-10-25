@@ -39,4 +39,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `serve -s build -l ${port}`
 
 Once the build folder has been created, it contains everything required to be hosted.
-Navigate to where the build folder is located, then use the command serve -s build to host it, port can be configured by adding -l or -listen followed by the port number.
+Navigate to where the build folder is located, then use the command `serve -s build` to host it, port can be configured by adding `-l` or `-listen` followed by the port number.
