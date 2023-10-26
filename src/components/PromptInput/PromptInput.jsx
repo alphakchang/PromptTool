@@ -5,7 +5,7 @@ import ApiCall from '../ApiCall/ApiCall';
 import { ChatLeftDots, QuestionCircle, GpuCard } from 'react-bootstrap-icons';
 import AlertMessage from '../AlertMessage/AlertMessage';
 
-const PromptInput = ({ promptChange, prompt, context }) => {
+const PromptInput = ({ proxy, promptChange, prompt, context }) => {
     const apiCall = React.createRef();
     const [showAlert, setShowAlert] = useState(false);
 
@@ -61,7 +61,7 @@ const PromptInput = ({ promptChange, prompt, context }) => {
             <div className='my-4'>
                 <label htmlFor="promptOutput" className="form-label fw-bold"><GpuCard /> Output</label>
                 <div className='border border-2 rounded-3 p-3'>
-                    <ApiCall ref={apiCall} content={context} prompt={prompt}/>
+                    <ApiCall proxy={proxy} ref={apiCall} content={context} prompt={prompt}/>
                 </div>
             </div>
         </div>
