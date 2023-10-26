@@ -14,6 +14,7 @@ class ApiCall extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            proxy: props.proxy,
             response: '',
             openai: null
         }
@@ -25,7 +26,7 @@ class ApiCall extends Component {
 
     async initializeOpenAI() {
         try {
-            let response = await fetch('http://localhost:5001/apikey');
+            let response = await fetch(`${this.state.proxy}/apikey`);
 
             if (!response.ok) {
                 throw new Error('Unable to retrieve API Key');
@@ -63,7 +64,7 @@ class ApiCall extends Component {
         }
 
         const completion = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
+            model: "gpt-4",
             messages: [
                 {
                     "role": "system",

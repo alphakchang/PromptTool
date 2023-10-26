@@ -7,7 +7,7 @@ import AlertMessage from '../AlertMessage/AlertMessage';
 
 const prompt = "Extract between 1 and 15 impactful terms from the following text, add a number before each term: "
 
-const TermExtraction = ({ content }) => {
+const TermExtraction = ({ proxy, content }) => {
     const apiCall = React.createRef();
     const [showAlert, setShowAlert] = useState(false);
 
@@ -35,7 +35,7 @@ const TermExtraction = ({ content }) => {
                 </div>
             </div>
             <div className="termArea py-2 px-3 rounded">
-                <ApiCall ref={apiCall} content={content} prompt={prompt}/>
+                <ApiCall proxy={proxy} ref={apiCall} content={content} prompt={prompt}/>
             </div>
 
             <div className='my-2'>

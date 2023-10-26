@@ -8,6 +8,7 @@ import PromptInput from './components/PromptInput/PromptInput';
 import Footer from './components/Footer/Footer';
 
 const initialState = {
+  proxy: 'http://localhost:5001',
   context: '',
   prompt: ''
 }
@@ -29,6 +30,9 @@ class App extends Component {
   }
 
   render() {
+
+    const { proxy, context, prompt } = this.state;
+
     return (
       <div>
         <Navigation />
@@ -36,15 +40,16 @@ class App extends Component {
             <section>
               <div className="row">
                 <ContentInput contextChange={this.contextChange} />
-                <TermExtraction content={this.state.context} />
+                <TermExtraction proxy={proxy} content={context} />
               </div>
             </section>
 
             <section>
               <PromptInput
+                proxy={proxy}
                 promptChange={this.promptChange}
-                prompt={this.state.prompt}
-                context={this.state.context}
+                prompt={prompt}
+                context={context}
               />
             </section>
 
