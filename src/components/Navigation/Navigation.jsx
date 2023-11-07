@@ -12,7 +12,7 @@ const Navigation = () => {
                     </span>
                 </a>
                 <span className="fw-bold text-secondary">
-                    Alpha CRC Prompt Tool - <span className="fst-italic"> NOW POWERED BY <span className="text-info-emphasis border border-1 px-1 bg-warning">GPT-4</span></span>
+                    Alpha CRC Prompt Tool - <span className="fst-italic"> NOW POWERED BY <span className="text-info-emphasis border border-1 px-1 bg-warning">GPT-4 Turbo</span></span>
                 </span>
 
                 {/* navbar links */}
