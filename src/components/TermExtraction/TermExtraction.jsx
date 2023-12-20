@@ -5,7 +5,7 @@ import ApiCall from '../ApiCall/ApiCall';
 import { QuestionCircle } from 'react-bootstrap-icons';
 import AlertMessage from '../AlertMessage/AlertMessage';
 
-const prompt = "Extract between 1 and 15 impactful terms from the following text, add a number before each term: "
+const prompt = "Pick one key term for roughly every 30 words, add a number before each term: "
 
 const TermExtraction = ({ proxy, content }) => {
     const apiCall = React.createRef();

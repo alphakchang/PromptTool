@@ -8,7 +8,7 @@ import PromptInput from './components/PromptInput/PromptInput';
 import Footer from './components/Footer/Footer';
 
 const initialState = {
-  proxy: 'http://localhost:5001',
+  proxy: 'https://naga.alphacrc.com:5001',
   context: '',
   prompt: ''
 }
